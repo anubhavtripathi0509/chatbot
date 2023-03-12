@@ -1,0 +1,36 @@
+1) Theory + NLP concepts (stemming, tokenization, bag of words)
+2) Create training data
+3) PyTorch model and training
+4) Save/Load model and implement the chat
+
+
+NLP Basics
+
+tokenization: splitting a string into meaningful units 
+eg: "how are you?"
+ans: ["how","are","you","?"]
+
+stemming: Generate the root from of the words.
+eg: "organize", "organizes", "organizing"
+ans: ["organ","organ","organ"]
+
+
+
+Our NLP Preprocessing Pipeline
+"Is anyone there?"
+    |
+    |   tokenize
+    |   
+["Is","anyone","there","?"]
+    |
+    |   lower+stem
+    |
+["is","anyon","there","?"]
+    |
+    |   exclude punctuation characters
+    |
+["is","anyon","there"]
+    |
+    |   bag of words
+    |
+X [0,0,0,1,0,1,0,1]
